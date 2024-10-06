@@ -1,0 +1,24 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "oop1.cpp",
+                "TextRedactor.cpp",
+                "test.cpp",   // Укажите все .cpp файлы проекта
+                "-o",
+                "oop1.exe"            // Название выходного файла
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task by VS Code"
+        }
+    ]
+}
