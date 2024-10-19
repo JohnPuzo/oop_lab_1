@@ -18,7 +18,12 @@ TextRedactor::TextRedactor(const TextRedactor &a){
 }
 
 void TextRedactor::moveCursoreInPosition(int cur){
-    cursor = cur;
+    if ( cur >= text.size() || cur < 0) {
+        std::cout << "Invalid position!" << std::endl;
+    } 
+    else {
+        cursor = cur;
+    }
 }
 
 void TextRedactor::moveCursoreOutPosition(int cur) {
@@ -50,6 +55,16 @@ void TextRedactor::removeText(int len){
 
 void TextRedactor::printText() const{
     std::cout << text << std::endl;
+}
+
+void TextRedactor::replacementText(std::string txt){
+    text = txt;
+    cursor = text.size();
+}
+
+void TextRedactor::removalText(){
+    text = "";
+    cursor = 0;
 }
 
 std::string TextRedactor::getText() const {

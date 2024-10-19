@@ -13,6 +13,8 @@ class TextRedactor
         void addText(std::string txt);
         void removeText(int len);
         void printText() const;
+        void replacementText(std::string txt);
+        void removalText();
         std::string getText() const;
         int getCursor() const;
 
