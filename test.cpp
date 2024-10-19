@@ -47,7 +47,7 @@ void checkTransformer(){
     Flying.run();
     assert(Flying.getlevel() == 90 && Flying.getDamage() == 10 && Flying.getHeight() == 20);
     Flying.fly();
-    assert(Walking.getlevel() == 75);
+    assert(Flying.getlevel() == 75);
 }
 
 void test(){
