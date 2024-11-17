@@ -33,6 +33,16 @@ void checkRedactor(){
     assert(Text1.getText() == "hehehe" && Text1.getCursor() == 6);
     Text1.removalText();
     assert(Text1.getText() == "" && Text1.getCursor() == 0);
+    Text1.undo();
+    assert(Text1.getText() == "hehehe" && Text1.getCursor() == 6);
+    Text1.undo();
+    assert(Text1.getText() == "loolo" && Text1.getCursor() == 5);
+    Text1.redo();
+    assert(Text1.getText() == "hehehe" && Text1.getCursor() == 6);
+    Text1.removalText();
+    assert(Text1.getText() == "" && Text1.getCursor() == 0);
+    Text1.redo();
+    assert(Text1.getText() == "" && Text1.getCursor() == 0);
 }
 
 void checkTransformer(){

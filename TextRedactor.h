@@ -1,4 +1,5 @@
 #include <string>
+#include "Stack.h"
 
 class TextRedactor
 {
@@ -17,9 +18,13 @@ class TextRedactor
         void removalText();
         std::string getText() const;
         int getCursor() const;
+        void undo();
+        void redo();
 
     
     private:
         std::string text;
         int cursor;
+        int redoNum;
+        Stack *Stack1;
 };
